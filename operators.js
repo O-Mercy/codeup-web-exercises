@@ -17,9 +17,9 @@ false
 5 >= -5
 true
 !false || false
-
+true
 true || "42"
-
+true
 !true && !false
 false
 6 % 5
