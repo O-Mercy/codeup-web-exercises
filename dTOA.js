@@ -27,8 +27,8 @@ let price = 2.7;
 price.toFixed(2);
 // price = 2.70
 
-let price = "2.7";
-price.toFixed(2);
+// let price = "2.7";
+// price.toFixed(2);
 // price = NaN
 
 isNaN(0)
@@ -99,3 +99,29 @@ let sample = "Hello Codeup";
 // sample.replace("Students", "Class")
 // sample.indexOf("c") is -1
 // sample.indexOf("C") is 6
+
+let moviePrice = 3
+let littleMermaid =  moviePrice * 3
+let brotherBear = moviePrice * 5
+let hercules = moviePrice * 1
+
+console.log(littleMermaid + brotherBear + hercules)
+
+let google = 400 * 6
+let amazon = 380 * 4
+let facebook = 350 * 10
+console.log(google + amazon + facebook);
+
+let username = 'codeup';
+let password = 'notastrongpassword';
+
+console.log(password.length);
+let passwordLength = password.length >= 5
+console.log(passwordLength);
+let passWord = password !== username
+console.log(passWord);
+let userName =username.length >= 20
+console.log(userName);
+
+
+
