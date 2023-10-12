@@ -19,12 +19,12 @@ e++;
 // d = NaN
 // e = 0
 
-let perplexed; // perplexed is undefined (no value is assigned)
-perplexed + 2;
+// let perplexed; // perplexed is undefined (no value is assigned)
+// perplexed + 2;
 // perplexed = NaN
 
-let price = 2.7;
-price.toFixed(2);
+// let price = 2.7;
+// price.toFixed(2);
 // price = 2.70
 
 // let price = "2.7";
@@ -99,6 +99,8 @@ let sample = "Hello Codeup";
 // sample.replace("Students", "Class")
 // sample.indexOf("c") is -1
 // sample.indexOf("C") is 6
+// console.log(sample.substring(6, 12));
+
 
 let moviePrice = 3
 let littleMermaid =  moviePrice * 3
@@ -122,6 +124,7 @@ let passWord = password !== username
 console.log(passWord);
 let userName =username.length >= 20
 console.log(userName);
-
+console.log(username.trim());
+console.log(password.trim());
 
 
