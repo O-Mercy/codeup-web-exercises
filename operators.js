@@ -13,7 +13,7 @@ console.log(0 < 0);
 // false; 0 is not less than 0
 console.log('false' == false);
 // false; string not equal to boolean
-console.log(true == 'true');
+console.log(true === 'true');
 // false; string not equal to boolean
 console.log(5 >= -5);
 // true; 5 is greater than or equal to -5
