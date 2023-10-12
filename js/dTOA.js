@@ -1,3 +1,5 @@
+// link for exercise
+// https://codeup-curriculum.web.app/curriculum/java/3.0.1/javascript-1/data-types-operators-variables
 let a = 1;
 console.log(a);
 // a = 1
@@ -30,33 +32,35 @@ e++;
 // let price = "2.7";
 // price.toFixed(2);
 // price = NaN
+// to fix this use parseInt.toFixed(2)
+// parseInt removes the first number in a string.
 
 isNaN(0)
 // false
 isNaN(1)
-// false
+// false 1 is a number
 isNaN("")
-// false??
+// false?? empty string is NaN
 isNaN("string")
-// true
+// true string is NaN
 isNaN("0")
-//false
+//false content inside the string is a number
 isNaN("1")
-//false
+//false content inside the string is a number
 isNaN("3.145")
-//false
+//false content inside the string is a number
 isNaN(Number.MAX_VALUE)
 // false
 isNaN(Infinity)
-//false??
+//false?? infinity is a number
 isNaN("true")
-//true
+//true string
 isNaN(true)
-// false??
+// false?? boolean
 isNaN("false")
-// true
+// true string
 isNaN(false)
-//false??
+//false?? false is a falsey value
 // to illustrate why the isNaN() function is needed:
 NaN == NaN
 // true
@@ -90,16 +94,38 @@ NaN == NaN
 !!"0"
 // true
 
+// No of characters in the string
 let sample = "Hello Codeup";
-// console.log(sample.length);
+console.log(sample.length);
 // 12
-// sample.toLowerCase()
-// sample.toUpperCase()
-// let sample = "Hello " + "Codeup " + "Students"
-// sample.replace("Students", "Class")
-// sample.indexOf("c") is -1
-// sample.indexOf("C") is 6
-// console.log(sample.substring(6, 12));
+
+// to Lowercase
+console.log(sample.toLowerCase());
+
+// to Uppercase
+console.log(sample.toUpperCase());
+
+// concatenate sample to add Students
+sample += "Students"
+sample = sample + "Students"
+// shorthand operator (+=)
+console.log(sample);
+
+// replace students with class
+console.log(sample.replace("Students", "Class"));
+
+// Index of ("c")
+console.log(sample.indexOf("c"));
+// Index does not exist returns -1
+
+// index of "C"
+console.log(sample.indexOf("C"));
+// Index of C is 6
+
+// retrieving 'Codeup' substring
+console.log(sample.substring(6, 12));
+// another solution
+console.log(sample.substring(sample.indexOf("C"), 1 + sample.indexOf("p")));
 
 
 let moviePrice = 3
@@ -112,7 +138,8 @@ console.log(littleMermaid + brotherBear + hercules)
 let google = 400 * 6
 let amazon = 380 * 4
 let facebook = 350 * 10
-console.log(google + amazon + facebook);
+console.log (google + amazon + facebook);
+
 
 let username = 'codeup';
 let password = 'notastrongpassword';
@@ -124,7 +151,7 @@ let passWord = password !== username
 console.log(passWord);
 let userName =username.length >= 20
 console.log(userName);
-console.log(username.trim());
-console.log(password.trim());
+let whiteSpace = (username.trim() == username) && (password.trim() == password)
+console.log(whiteSpace);
 
 
