@@ -1,23 +1,23 @@
 // link for exercise
 // https://codeup-curriculum.web.app/curriculum/java/3.0.1/javascript-1/data-types-operators-variables
-let a = 1;
-console.log(a);
-// a = 1
-
-let b = a++;
-console.log(b);
-// b = 1
-
-let c = ++a;
-console.log(c);
-// c = 3
-// what is the value of a, b, and c?
-
-let d = "hello";
-let e = false;
-
-d++;
-e++;
+// let a = 1;
+// console.log(a);
+// // a = 1
+//
+// let b = a++;
+// console.log(b);
+// // b = 1
+//
+// let c = ++a;
+// console.log(c);
+// // c = 3
+// // what is the value of a, b, and c?
+//
+// let d = "hello";
+// let e = false;
+//
+// d++;
+// e++;
 // d = NaN
 // e = 0
 
@@ -35,64 +35,64 @@ e++;
 // to fix this use parseInt.toFixed(2)
 // parseInt removes the first number in a string.
 
-isNaN(0)
+// isNaN(0)
+// // false
+// isNaN(1)
+// // false 1 is a number
+// isNaN("")
+// // false?? empty string is NaN
+// isNaN("string")
+// // true string is NaN
+// isNaN("0")
+// //false content inside the string is a number
+// isNaN("1")
+// //false content inside the string is a number
+// isNaN("3.145")
+// //false content inside the string is a number
+// isNaN(Number.MAX_VALUE)
+// // false
+// isNaN(Infinity)
+// //false?? infinity is a number
+// isNaN("true")
+// //true string
+// isNaN(true)
+// // false?? boolean
+// isNaN("false")
+// // true string
+// isNaN(false)
+// //false?? false is a falsey value
+// // to illustrate why the isNaN() function is needed:
+// NaN == NaN
+// // true
+//
+// !true
 // false
-isNaN(1)
-// false 1 is a number
-isNaN("")
-// false?? empty string is NaN
-isNaN("string")
-// true string is NaN
-isNaN("0")
-//false content inside the string is a number
-isNaN("1")
-//false content inside the string is a number
-isNaN("3.145")
-//false content inside the string is a number
-isNaN(Number.MAX_VALUE)
-// false
-isNaN(Infinity)
-//false?? infinity is a number
-isNaN("true")
-//true string
-isNaN(true)
-// false?? boolean
-isNaN("false")
-// true string
-isNaN(false)
-//false?? false is a falsey value
-// to illustrate why the isNaN() function is needed:
-NaN == NaN
-// true
-
-!true
-// false
-!false
-//true
-!!true
-// true
-!!false
-// false
-!!0
-// false
-!!-0
-// false
-!!1
-// true
-!!-1
-// true
-!!0.1
-// true
-!!"hello"
-// true
-!!""
-// false
-!!''
-// false
-!!"false"
-// true
-!!"0"
-// true
+// !false
+// //true
+// !!true
+// // true
+// !!false
+// // false
+// !!0
+// // false
+// !!-0
+// // false
+// !!1
+// // true
+// !!-1
+// // true
+// !!0.1
+// // true
+// !!"hello"
+// // true
+// !!""
+// // false
+// !!''
+// // false
+// !!"false"
+// // true
+// !!"0"
+// // true
 
 // No of characters in the string
 let sample = "Hello Codeup";
