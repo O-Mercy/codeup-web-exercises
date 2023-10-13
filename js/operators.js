@@ -1,3 +1,9 @@
+"use strict";
+
+// link for exercise
+// https://codeup-curriculum.web.app/curriculum/java/3.0.1/javascript-1/operators
+
+
 console.log('1' + 2);
 // 12; concatenated 1 with 2
 console.log("" ** 4);
