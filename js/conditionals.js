@@ -30,20 +30,20 @@
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-function analyzeColor(color) {
-    if (color.toLowerCase() === "blue") {
-        return "Blue is the color of the sky";
-    } else if(color.toLowerCase() === "green"){
-        return "Grass is green";
-    } else if(color.toLowerCase() === "red"){
-        return "Strawberries are red";
-    } else if(color.toLowerCase() === "yellow"){
-        return "The sun is yellow";
-    } else {
-        return `I don't know anything about ${color}`
-    }
-}
-console.log(analyzeColor(randomColor));
+// function analyzeColor(color) {
+//     if (color.toLowerCase() === "blue") {
+//         return "Blue is the color of the sky";
+//     } else if(color.toLowerCase() === "green"){
+//         return "Grass is green";
+//     } else if(color.toLowerCase() === "red"){
+//         return "Strawberries are red";
+//     } else if(color.toLowerCase() === "yellow"){
+//         return "The sun is yellow";
+//     } else {
+//         return `I don't know anything about ${color}`
+//     }
+// }
+// console.log(analyzeColor(randomColor));
 
 
 // /**
