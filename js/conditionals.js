@@ -40,9 +40,11 @@ function analyzeColor(color) {
     } else if(color.toLowerCase() === "yellow"){
         return "The sun is yellow";
     } else {
-        console.log(`I don't know anything about ${color}`);
+        return `I don't know anything about ${color}`
     }
 }
+console.log(analyzeColor(randomColor));
+
 
 // /**
 //  * TODO:
@@ -51,6 +53,8 @@ function analyzeColor(color) {
 //  */
 console.log(analyzeColor(randomColor));
 // /**
+
+
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
 //  */
@@ -74,20 +78,23 @@ switch (color.toLowerCase()) {
         return `I don't know anything about ${color}`
     }
 }
+console.log(analyzeColor(randomColor))
 
-console.log(randomColor);
-console.log(analyzeColor((randomColor)))
+
 // /**
 //  * TODO:
 //  * Prompt the user for a color when the page loads, and pass the input from the
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
 //  */
+// solution 1
 // let userInput = prompt("Please enter color")
 // let message = analyzeColor(userInput)
 // alert(message);
+// solution 2
 let userInput = prompt("Please enter color")
 alert (analyzeColor(userInput))
+
 
 // /* ########################################################################## */
 //
@@ -117,7 +124,7 @@ function calculateTotal(luckyNumber, totalAmount) {
         case 0:
             return totalAmount
         case 1:
-            return totalAmount * 0.1
+            return totalAmount * 0.9
         case 2:
             return totalAmount * 0.25
         case 3:
@@ -126,10 +133,12 @@ function calculateTotal(luckyNumber, totalAmount) {
             return totalAmount * 0.5
         case 5:
             return 0;
+        default:
+            return "Invalid lucky number!"
     }
 }
 
-console.log(calculateTotal(1, 100));
+console.log(calculateTotal(4, 100));
 //  *
 
 //  * TODO:
@@ -142,7 +151,7 @@ console.log(calculateTotal(1, 100));
 // // Generate a random number between 0 and 6
 const luckyNumber = Math.floor(Math.random() * 6);
 let totalBill = parseFloat(prompt("What was the total bill?"))
-alert(`Your lucky number was ${luckyNumber} and you're price before discount was ${calculateTotal(luckyNumber, totalBill)}`)
+alert(`Your lucky number was ${luckyNumber}, you're total before discount was $${totalBill.toFixed(2)} and you're price after discount was $${parseFloat(calculateTotal(luckyNumber, totalBill))}`)
 // /**
 //  * TODO:
 //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -187,18 +196,31 @@ alert(`Your lucky number was ${luckyNumber} and you're price before discount was
 
 let enterNumber = confirm("Would you like to enter a number?");
 if (enterNumber) {
-    let input = prompt("Enter a number");
+    let input = parseFloat(prompt("Enter a number"));
     if (isNaN(input)) {
         alert('Invalid input. Please enter a number');
+    } else {
+        alert(isEvenOdd(input));
+        alert(plus100(input));
+        alert(isPosNeg(input));
     }
-    else {
-        let number = parseInt(input)
-        let isEven = number % 2 === 0
-        let isNegative = number < 0
+}
 
-        alert(`The number is even${input % 2 === 0}`);
-        alert(`The number is +100 ${input + 100}`);
-        alert(`The number is odd ${input % 2 !== 0}`);
-        alert(`The number is positive ${input >= 0}`);
+function isEvenOdd(num) {
+    if (num % 2 === 0) {
+        return `${num} is an even number!`
+    } else {
+        return `${num} is an odd number!`
+    }
+}
+function plus100 (num) {
+    return `${num} + 100 is ${num + 100}`
+}
+
+function isPosNeg(num) {
+    if (num >= 0) {
+        return `${num} is a positive number!`
+    } else {
+        return `${num} is a negative number!`
     }
 }
