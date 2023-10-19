@@ -68,3 +68,16 @@ const largestNum = (input1, input2, input3)=> {
 console.log(largestNum(5, 10, 15));
 
 
+// 19/10
+// Declare a variable named "num" with a value of 100. Using a while loop decrement num by 5 till you reach zero, and console.log("even") for every even number.
+// Example output: (95, 90 even, 85, 80 even)
+
+let num = 100
+while (num  >= 0) {
+    if(num % 2 === 0){
+        console.log(`${num} is even`);
+    }else {
+        console.log(num);
+    }
+    num -= 5
+}
