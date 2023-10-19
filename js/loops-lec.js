@@ -106,7 +106,7 @@ for(let i = 0; i < 100; i += 5 ){
     console.log(i)
     break;
     // break stops at the condition
-    console.log(`Snippet will never be reached`);
+    // console.log(`Snippet will never be reached`);
 }
 
 for(let i = 0; i < 100; i += 5 ){
