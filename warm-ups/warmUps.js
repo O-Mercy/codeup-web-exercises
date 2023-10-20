@@ -52,32 +52,45 @@
 
 // }
 // Solution using if/else
-const largestNum = (input1, input2, input3)=> {
-    if (input1 >=input2 && input1>= input3) {
-        return input1 + " is the greatest number";
-    } else {
-        if (input2 >= input1 && input2 >= input3) {
-            return input2 + " is the greatest number";
-        } else {
-            if (input3 >= input1 && input3 >= input2) {
-                return input3 + " is the greatest number";
-            }
-        }
-    }
-}
-console.log(largestNum(5, 10, 15));
+// const largestNum = (input1, input2, input3)=> {
+//     if (input1 >=input2 && input1>= input3) {
+//         return input1 + " is the greatest number";
+//     } else {
+//         if (input2 >= input1 && input2 >= input3) {
+//             return input2 + " is the greatest number";
+//         } else {
+//             if (input3 >= input1 && input3 >= input2) {
+//                 return input3 + " is the greatest number";
+//             }
+//         }
+//     }
+// }
+// console.log(largestNum(5, 10, 15));
 
 
 // 19/10
 // Declare a variable named "num" with a value of 100. Using a while loop decrement num by 5 till you reach zero, and console.log("even") for every even number.
 // Example output: (95, 90 even, 85, 80 even)
 
-let num = 100
-while (num  >= 0) {
-    if(num % 2 === 0){
-        console.log(`${num} is even`);
-    }else {
-        console.log(num);
-    }
-    num -= 5
-}
+// let num = 100
+// while (num  >= 0) {
+//     if(num % 2 === 0){
+//         console.log(`${num} is even`);
+//     }else {
+//         console.log(num);
+//     }
+//     num -= 5
+// }
+
+// 20/10
+// Create a function that uses a loop that returns all the even numbers between 1 and 100. Console log your function
+// function isEven() {
+//     for (let i = 1; i <= 100; i++) {
+//         if (i % 2 === 0) {
+//             console.log(`${i} is even`);
+//         }
+//     }
+// }
+//
+// isEven();
+
