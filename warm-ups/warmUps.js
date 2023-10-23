@@ -94,3 +94,8 @@
 //
 // isEven();
 
+// 23/10
+// Create an array of at least 5 of your favorite movies. Create a for each (or a for of loop) to console log all of your movies in alphabetical order
+const movies= ["Mollys Game", "Ava", "The Good Nurse", "Memory", "The Harder they Fall"]
+movies.sort()
+movies.forEach(movie => console.log(movie))
