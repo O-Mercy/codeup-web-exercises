@@ -55,11 +55,11 @@ const numbers = [1, 2, 3, 4];
 
 //using for of loop to iterate through an array
 // const iterable = [1, 2, 3, 4, 5];
-//
+// ...calls out the first element in the array
 // for (let element of iterable) {
 //     console.log(element)
 // }
-
+// ??????
 // for(let num of numbers){
 //     console.log(num)
 // }

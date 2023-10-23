@@ -48,3 +48,10 @@
     planets.sort()
     console.log(planets);
 })();
+// use the unshift method to add "The Sun" to the beginning of the planets array.
+//  use the push method to add "Pluto" to the end of the planets array.
+//  use the shift method to remove "The Sun" from the beginning of the array.
+//  use the pop method to remove "Pluto" from the end of the array.
+//  use the indexOf method to find the index of "Earth" in the array and log it.
+//  use the reverse method to reverse the order of the planets array.
+//  use the sort method to sort the planets array alphabetically.

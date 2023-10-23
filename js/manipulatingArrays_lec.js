@@ -144,3 +144,4 @@ namesString = namesArray.join(', ');
 
 console.log(namesString);
 // Joe, Bob, Sally
+
