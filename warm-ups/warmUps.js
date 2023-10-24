@@ -99,3 +99,36 @@
 const movies= ["Mollys Game", "Ava", "The Good Nurse", "Memory", "The Harder they Fall"]
 movies.sort()
 movies.forEach(movie => console.log(movie))
+
+24/10
+// Create an array of car objects. each object should have three properties: make, model and color. write a for each or for loop to log each car's make, model and color
+const cars = [
+    {
+        Make: "Toyota",
+        model:"Avalon",
+        color: "Black"
+
+    },
+    {
+        Make: "Jeep",
+        model:"Wrangler",
+        color: "Granite Grey"
+
+    },
+    {
+        Make: "Rivian",
+        model:"SUV",
+        color: "White"
+
+    }]
+console.log(cars[0].Make)
+console.log(cars[0].model)
+console.log(cars[0].color)
+
+for (let i = 0; i < cars.length; i++) {
+    console.log(`Car ${i + 1}: Make - ${cars[i].Make}, Model - ${cars[i].model}, Color - ${cars[i].color}`);
+}
+
+cars.forEach(car => {
+    console.log(`Make: ${car.Make}, Model: ${car.model}, Color: ${car.color}`);
+});
