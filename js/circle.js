@@ -22,6 +22,9 @@
                 // Otherwise, output the complete value
 
                 console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle.getArea()));
+            }else {
+                // Otherwise, output the complete value
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea());
             }
         }
     };
@@ -34,6 +37,7 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
+    circle.radius = 5;
 
     // log info about the circle
     console.log("Raw circle information");
