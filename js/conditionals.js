@@ -30,20 +30,20 @@
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-// function analyzeColor(color) {
-//     if (color.toLowerCase() === "blue") {
-//         return "Blue is the color of the sky";
-//     } else if(color.toLowerCase() === "green"){
-//         return "Grass is green";
-//     } else if(color.toLowerCase() === "red"){
-//         return "Strawberries are red";
-//     } else if(color.toLowerCase() === "yellow"){
-//         return "The sun is yellow";
-//     } else {
-//         return `I don't know anything about ${color}`
-//     }
-// }
-// console.log(analyzeColor(randomColor));
+function analyzeColor(color) {
+    if (color.toLowerCase() === "blue") {
+        return "Blue is the color of the sky";
+    } else if(color.toLowerCase() === "green"){
+        return "Grass is green";
+    } else if(color.toLowerCase() === "red"){
+        return "Strawberries are red";
+    } else if(color.toLowerCase() === "yellow"){
+        return "The sun is yellow";
+    } else {
+        return `I don't know anything about ${color}`
+    }
+}
+console.log(analyzeColor("yellow"));
 
 
 // /**
@@ -89,11 +89,7 @@ console.log(analyzeColor(randomColor))
 //  */
 // solution 1
 // let userInput = prompt("Please enter color")
-// let message = analyzeColor(userInput)
-// alert(message);
-// solution 2
-let userInput = prompt("Please enter color")
-alert (analyzeColor(userInput))
+// alert (analyzeColor(userInput))
 
 
 // /* ########################################################################## */
@@ -170,29 +166,7 @@ alert(`Your lucky number was ${luckyNumber}, you're total before discount was $$
 //  * Can you refactor your code to use functions?
 //  * HINT: The way we prompt for a value could be improved
 // //  */
-// let enterNumber = confirm("Would you like to enter a number?");
-// function weirdQuestion(){
-//     if (enterNumber){
-//         const randomNumber = prompt("Enter number")
-//         if (randomNumber) {
-//             let number = parseFloat(randomNumber)
-//             const isEven = number % 2 === 0;
-//             const plus100 = number + 100;
-//             const isPositive = number >=0 ? "positive" : "negative";
-//
-//             alert(`${isEven} is even`);
-//             alert(`${plus100} is plus 100`);
-//             alert(`${isPositive} is positive`);
-//         } else {
-//             alert("Invalid input: Not a number")
-//         }
-//     }
-// }
-//
-// let randomNumber = prompt(enterNumber)
-// if (enterNumber) {
-//     weirdQuestion()
-// }
+
 
 let enterNumber = confirm("Would you like to enter a number?");
 if (enterNumber) {

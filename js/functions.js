@@ -90,11 +90,11 @@ console.log(calculateTip(0.20, 20).toFixed(2));
 //  */
 //
 //
-// let billTotal = parseInt(prompt('How much is the total bill?'));
-// let tipPercentage = parseInt(prompt('How much do you want to tip?'));
-// let tipAmount = calculateTip(tipPercentage/100, billTotal);
-// alert (`You can tip $${tipAmount.toFixed(2)}`);
-// /**
+let billTotal = parseInt(prompt('How much is the total bill?'));
+let tipPercentage = parseInt(prompt('How much do you want to tip?'));
+let tipAmount = calculateTip(tipPercentage/100, billTotal);
+alert (`You can tip $${tipAmount.toFixed(2)}`);
+/**
 //  * TODO:
 //  * Create a function named `applyDiscount`. This function should accept a price
 //  * (before a discount is applied), and a discount percentage (a number between 0
