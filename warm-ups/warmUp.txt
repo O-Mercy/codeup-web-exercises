@@ -10,5 +10,7 @@
    <p>A-Achievable- </p>
    <p>R-Relevant- Goal is to travel the world, remote job will allow me to accomplish that</p>
    <p>T-Timely- In 2 years be free to work remotely from anywhere</p>
+
+
     </body>
 </html>

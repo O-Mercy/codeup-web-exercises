@@ -7,31 +7,33 @@
 <body>
 <h1>Register with us!</h1>
 <form method="POST" action="https://request-inspector.glitch.me/">
-    <label for="email">email</label>
-    <input id="email" name="email" type="text">
+    <label for="email">User Name</label>
+    <input id="email" name="email" type="text" placeholder="user@email.com">
     <br>
     <label for="password">password</label>
-    <input id="password" name="password" type="password">
+    <input id="password" name="password" type="password" placeholder="Password">
     <br>
-    <textarea name="bio"></textarea>
+    <label for="bio">Bio</label>
+    <textarea id="bio" name="bio"></textarea>
     <br>
-    <p>How did you hear about us?</p>
-    <ol>
-        <!--    <input id="check" name="news" value="true" type="checkbox" checked>-->
-        <li>billboard <input type="radio" name="news" value="billboard"><br></li>
-        <li>radio advertisement <input type="radio" name="news" value="radio advertisement"><br></li>
-        <li>internet advertisement <input type="radio" name="news" value="internet advertisement"><br></>
-        <li> other <input type="radio" name="news" value="other"><br></li>
-    </ol>
-    <p>What browser are you using?</p>
-    <ul>
-        <select name="coffee_preference">
+    <h1>How did you hear about us?</h1>
+    <label for="radio">Billboard</label>
+        <input id="radio" name="news" value="billboard" type="radio"><br></li>
+    <label for="radio advertisement">Radio Advertisement</label>
+        <input id="radio advertisement" name="news" value="radio advertisement" type="radio"><br></li>
+    <label for="internet advertisement">Internet Advertisement</label>
+        <input id="internet advertisement" name="news" value="internet advertisement" type="radio"><br></li>
+    <label for="other">other</label>
+        <input id="other" name="news" value="other" type="radio"><br></li>
+<br>
+    <label for="browserPreference">What browser are you using?</label>
+        <select name="browserPreference" id="browserPreference">
             <option value="google chrome">Chrome</option>
             <option value="mozilla firefox">Mozilla Firefox</option>
             <option value="safari">Safari</option>
             <option value="microsoft edge">Microsoft Edge</option>
         </select>
-    </ul>
+    <br>
     <button type="submit">Submit</button>
 </form>
 </body>
