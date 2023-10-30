@@ -1,0 +1,95 @@
+/*select element by name*/
+h1{
+    color: greenyellow;
+    text-align: center;
+}
+
+/*calling element by the ID*/
+#header2 {
+    color: darkblue;
+}
+
+/*calling the element by the class*/
+.content{
+    background-color: dimgray;
+}
+
+/*!*selecting multiple selectors*! we separate multiple selectors with a comma.*/
+h1, .content{
+    font-weight: lighter;
+}
+/*Combining class selector properties*/
+.fancy-header{
+    font-family: cursive;
+}
+.extra-large{
+    color: red;
+}
+
+/*descendant selectors*/
+#container h1{
+    color: blue;
+}
+
+/*!*direct child selector*! use a >(greater than) sign*/
+/*parent container is container id and direct child selector is p*/
+#container>p{
+    background: #ABC;
+}
+
+/*Combining selectors*/
+h1.content{
+    color: yellow;
+    text-indent: 50px;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover{
+    color: blue;
+    font-size: 25px;
+}
+
+a:active{
+    color: greenyellow;
+}
+
+#color {
+    /*color: brown;*/
+    /*color: rgb(255, 0, 0)*/
+    color: #318c7a;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+html {
+    background-image: url("../img/cow.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-color: rgb(22, 147, 22);*/
+
+}
+
+ul {
+    /*list-style: none;*/
+    list-style: square;
+}
+
+p {
+    border: 5px solid red;
+}
+
+em {
+    border: inherit;
+}
