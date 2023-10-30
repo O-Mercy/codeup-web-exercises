@@ -1,0 +1,12 @@
+strong {
+    color: pink;
+}
+/*# is used for id attribute*/
+#unique {
+    background-color: aquamarine;
+    color: whitesmoke;
+}
+/*. is used for class attribute*/
+.paragraph {
+    color: blue;
+}
