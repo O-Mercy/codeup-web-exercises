@@ -1,0 +1,61 @@
+div{
+    /*to control content use width and height*/
+    width: 300px;
+    height: 150px;
+    background-color: indianred;
+}
+
+#one{
+    padding: 30px;
+    background-color: #318c7a;
+    border: 5px solid purple;
+    margin-bottom: 10px;
+}
+
+#two{
+    padding: 10px 50px;
+    border: 3px dashed black;
+}
+
+#three{
+    /*to control space between content use padding*/
+    padding: 5px 30px 40px 15px;
+    border: 2px solid pink;
+    margin: 50px 5px 50px 50px;
+}
+
+h1{
+    text-align: justify;
+    margin-bottom: 20px;
+    border: 3px solid red;
+}
+
+button{
+    border: 5px black;
+    margin: 8px;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+
+.box{
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.box p{
+    font-size: 24px;
+}
+
+.box span{
+    font-size: 18px;
+    margin: 40px;
+    background-color: #AABBCC;
+    padding: 10px;
+}
