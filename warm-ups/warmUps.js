@@ -132,3 +132,64 @@ for (let i = 0; i < cars.length; i++) {
 cars.forEach(car => {
     console.log(`Make: ${car.Make}, Model: ${car.model}, Color: ${car.color}`);
 });
+
+// 01/11
+// Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+
+    // Data Structure/Example Input:
+    let developers = [
+        {
+            name: "Jonathan",
+            languages: {
+                frontend: ["HTML", "JavaScript", "CSS"],
+                backend: ["Java"]
+            }
+        },
+        {
+            name: "Bonnie",
+            languages: {
+                frontend: ["JavaScript"],
+                backend: []
+            }
+        },
+        {
+            name: "Raj",
+            languages: {
+                frontend: [],
+                backend: ["C#", "Java", "Python"]
+            }
+        },
+        {
+            name: "Carmen",
+            languages: {
+                frontend: ["JavaScript", "HTML", "CSS", "React"],
+                backend: ["C#", "Java", "Python", "TypeScript"]
+            }
+        }
+    ]
+
+
+function knowsJavaScript(developers) {
+    let javascriptDevelopers = [];
+    for (let i = 0; i < developers.length; i++) {
+        if (developers[i].languages.frontend.includes("JavaScript")) {
+            javascriptDevelopers.push(developers[i].name);
+        }
+    }
+    return javascriptDevelopers;
+}
+
+console.log(knowsJavaScript(developers));
+
+
+
+const knowsJavascript = () => {
+    let javaScriptDevs = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[j].languages.frontend.length; j++) {
+            javaScriptDevs.push(arr[i].name)
+        }
+    }
+    return javaScriptDevs
+}
+console.log(knowsJavascript(developers));
