@@ -193,3 +193,62 @@ const knowsJavascript = () => {
     return javaScriptDevs
 }
 console.log(knowsJavascript(developers));
+
+// 11/10
+// Create a function that accepts three arguments (arrOfElements, bgColor, textColor), and returns the array of objects with their corresponding properties changed to the inputted values of bgColor and textColor.
+
+    let elements = [
+    {
+        el: "button"
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Submit"
+    },
+    {
+        el: "p"
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Our company is better at doing company things than your company."
+    },
+    {
+        el: "h2"
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Welcome Back!"
+    }
+];
+function updateStyles(arrOfElements, bgColor, textColor) {
+    let updatedElements = [];
+    for (let i = 0; i < arrOfElements.length; i++) {
+        let element = arrOfElements[i];
+        element.style.backgroundColor = bgColor;
+        element.style.color = textColor;
+        updatedElements.push(element);
+    }
+    return updatedElements;
+}
+function newStyles(arrOfElements, bgColor, textColor) {
+    let newElements = [];
+    for (let i = 0; i < arrOfElements.length; i++){
+        let element = arrOfElements[i];
+        bgColor = element.style.backgroundColor
+        textColor = element.style.color
+    }
+    return newElements;
+}
+
+
+
+
+
+
+
+
+
+
