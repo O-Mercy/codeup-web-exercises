@@ -1,0 +1,39 @@
+#WelcomeContainer{
+    background-image: url("/img/DominosPizza.png");
+    height: 346px;
+    background-size: cover;
+    top: 15em;
+
+}
+
+.card-title{
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    opacity: 70%;
+    align-items: center;
+    position: relative;
+    top: 4.5em;
+
+}
+.card{
+    width:100% ;
+}
+.header{
+    background-color: rgb(21,107,248);
+    color: white;
+    font-weight: normal;
+    margin: auto;
+
+}
+.btn-primary{
+    display: flex;
+    text-align: right;
+    margin-right: auto;
+
+}
+.list-group-item1{
+    background-color: rgb(21,107,248);
+    color: white;
+}
+.
