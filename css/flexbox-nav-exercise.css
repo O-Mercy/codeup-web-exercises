@@ -3,9 +3,10 @@
 }
 body {
     margin: 0;
+    padding: 0;
 }
 nav {
-    background: lightyellow;
+    background: grey;
 }
 ul {
     list-style: none;
@@ -17,6 +18,13 @@ ul {
 
 nav a:hover {
     background: blue;
+}
+.logo{
+    text-decoration: none;
+    padding: .2em;
+}
+a:link{
+    display: inline-block;
 }
 nav ul li:nth-child(5) {
     /*
