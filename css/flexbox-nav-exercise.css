@@ -3,33 +3,51 @@
 }
 body {
     margin: 0;
-    padding: 0;
 }
 nav {
-    background: grey;
+    background-color: #C1C1C1;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    position: relative;
 }
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;/* made unordered list a flex container */
-    color: white;
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: .5em;
+}
+nav a:hover {
+    color: blue;
+    text-decoration: none;
 }
 
-nav a:hover {
-    background: blue;
+ul {
+    list-style: none;
 }
-.logo{
-    text-decoration: none;
-    padding: .2em;
+.left-nav {
+    display: flex;
+    margin-right: auto;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+
+
 }
-a:link{
-    display: inline-block;
+.logo-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    position: absolute;
+    left: 46%;
+    /*transform: translateX(-48%);*/
+    top: 50%;
+    transform: translateY(-50%);
 }
-nav ul li:nth-child(5) {
-    /*
-        this allows the last flex item to be right justified
-        by filling remaining space to the left of the flex item with margin
-    */
-    margin-left: 30%
+.right-nav {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
 }
