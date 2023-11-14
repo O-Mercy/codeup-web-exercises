@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="header">Happy Tuesday!!</h1>
+<p><strong>Want a <em>free</em> taco??</strong></p>
+<form name="login">
+  <div>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+<script>
+  "use strict";
+  // get the "username" input
+  let usernameInput = document.forms.login.username;
+
+  // log the value of the "username" input
+  console.log(usernameInput.value);
+  alert('Sike! You thought!!')
+  const userName = document.getElementById('#password');
+  console.log(userName);
+  userName.setAttribute("style", "color:blue")
+</script>
+</body>
+</html>
