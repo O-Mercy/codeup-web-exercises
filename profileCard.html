@@ -31,11 +31,11 @@
     }, 6000);
 
 
-    const profileCard = document.querySelector("#profile-card");
+    const profileCardToggle = document.querySelector("#profile-card");
     let toggleClass = "bg-color-toggle";
     let toggle = true;
     const toggleClasses = () => {
-      profileCard.classList.toggle(toggleClass);
+      profileCardToggle.classList.toggle(toggleClass);
       toggle = !toggle;
     }
     setInterval(toggleClasses, 2000);
