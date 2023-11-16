@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1 class="main-header">Konami Code</h1>
+
+<script>
+  "use strict";
+let previousKey = ""
+
+  document.addEventListener("keyup", event => console.log(event.key) );
+  document.addEventListener("keyup", event => {
+    previousKey = event.key;
+    if (event.key === "ArrowUp") {
+      console.log("Up");
+    } else if (event.key === "ArrowDown") {
+      console.log("Down");
+    } else if (event.key === "ArrowLeft") {
+      console.log("Left");
+    } else if (event.key === "ArrowRight") {
+      console.log("Right");
+    } else if (event.key === "b") {
+      if (previousKey == "ArrowRight") {
+        console.log("Correct!");
+      } else {
+        console.log("Incorrect!");
+      }
+      alert('You have added 30 lives!')
+    }
+  })
+  const mainHeader = document.getElementById('main-header');
+
+</script>
+</body>
+</html>

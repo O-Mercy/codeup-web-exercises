@@ -81,53 +81,89 @@
         //
         // console.log(changeSubParagraphText());
 
-        // Part 2 of exercise--
+        // Part 2 of exercise--DOM events
+
+        // const mainHeader = document.getElementById('main-header');
+        // const subHeader = document.getElementById('sub-header');
+        // const listItems = document.getElementsByTagName('li');
+        // const subParagraphs = document.getElementsByClassName('sub-paragraph');
+        //
+        // function setMainHeader() {
+        //     mainHeader.innerHTML = "JavaScript is Cool";
+        //     console.log(mainHeader.innerHTML);
+        // }
+        //
+        // // Function to set text color of subHeader to blue
+        // function setSubHeaderColor() {
+        //     subHeader.style.color = "blue";
+        // }
+        //
+        // // Function to set text color on every other list item to grey
+        // function setListItemsColor() {
+        //     for (let i = 0; i < listItems.length; i++) {
+        //         if (i % 2 === 0) {
+        //             listItems[i].style.color = "grey";
+        //         }
+        //     }
+        //     console.log(listItems);
+        // }
+        //
+        // // Function to set text color of li with dbid = 1 to blue
+        // function setListItemDbidColor() {
+        //     const listItemDbid1 = document.querySelector('li[data-dbid="1"]');
+        //     if (listItemDbid1) {
+        //         listItemDbid1.style.color = "blue";
+        //     }
+        // }
+        //
+        // // Function to change text in the first sub paragraph to "Mission Accomplished!"
+        // function changeSubParagraphText() {
+        //     if (subParagraphs.length > 0) {
+        //         subParagraphs[0].textContent = "Mission Accomplished!";
+        //     }
+        // }
+        //
+        // // Attach click event listeners to the buttons
+        // document.getElementById('btn1').addEventListener('click', setMainHeader);
+        // document.getElementById('btn2').addEventListener('click', setSubHeaderColor);
+        // document.getElementById('btn3').addEventListener('click', setListItemsColor);
+        // document.getElementById('btn4').addEventListener('click', changeSubParagraphText);
+
+        // Part 3 Mouse Events
 
         const mainHeader = document.getElementById('main-header');
         const subHeader = document.getElementById('sub-header');
-        const listItems = document.getElementsByTagName('li');
-        const subParagraphs = document.getElementsByClassName('sub-paragraph');
+        const paragraphs = document.querySelectorAll('p');
+        const listItems = document.querySelectorAll('li');
 
-        function setMainHeader() {
-            mainHeader.innerHTML = "JavaScript is Cool";
-            console.log(mainHeader.innerHTML);
+        // Function to change the background color of an h1 element when clicked
+        function changeHeaderBackgroundColor() {
+            mainHeader.style.backgroundColor = "lightblue";
         }
 
-        // Function to set text color of subHeader to blue
-        function setSubHeaderColor() {
-            subHeader.style.color = "blue";
+        // Function to set font size of paragraphs to 18px when double clicked
+        function setParagraphFontSize() {
+            paragraphs.forEach(function (paragraph) {
+                paragraph.style.fontSize = "18px";
+            });
         }
 
-        // Function to set text color on every other list item to grey
-        function setListItemsColor() {
-            for (let i = 0; i < listItems.length; i++) {
-                if (i % 2 === 0) {
-                    listItems[i].style.color = "grey";
-                }
-            }
-            console.log(listItems);
-        }
+        // Function to set li text color to red on hover and reset to black when not hovering
 
-        // Function to set text color of li with dbid = 1 to blue
-        function setListItemDbidColor() {
-            const listItemDbid1 = document.querySelector('li[data-dbid="1"]');
-            if (listItemDbid1) {
-                listItemDbid1.style.color = "blue";
-            }
-        }
+            listItems.forEach(function (listItem) {
+                listItem.addEventListener('mouseover', function () {
+                    listItem.style.color = "red";
+                });
 
-        // Function to change text in the first sub paragraph to "Mission Accomplished!"
-        function changeSubParagraphText() {
-            if (subParagraphs.length > 0) {
-                subParagraphs[0].textContent = "Mission Accomplished!";
-            }
-        }
+                listItem.addEventListener('mouseout', function () {
+                    listItem.style.color = "black";
+                });
+            });
+
 
         // Attach click event listeners to the buttons
-        document.getElementById('btn1').addEventListener('click', setMainHeader);
-        document.getElementById('btn2').addEventListener('click', setSubHeaderColor);
-        document.getElementById('btn3').addEventListener('click', setListItemsColor);
-        document.getElementById('btn4').addEventListener('click', changeSubParagraphText);
+        document.getElementById('btn1').addEventListener('click', changeHeaderBackgroundColor);
+        document.getElementById('btn2').addEventListener('click', setParagraphFontSize);
 </script>
 </body>
 </html>
