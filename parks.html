@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parks</title>
+
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+
+        <h3>Big Bend National Park</h3>
+        <ul>
+            <li>Evidenced in discovery of sea fossils and dinosaur bones to volcanic dikes that mar the desert
+                landscape
+            </li>
+            <li>There are more than 450 species of birds found in Big Bend National Park</li>
+            <li>The Langford Hot Springs, located within the park, has an average temperature of about 105 degrees.</li>
+            <li>It’s considered one of the best places to star gaze!</li>
+        </ul>
+
+        <h3>Guadalupe Mountains National Park</h3>
+        <ul>
+            <li>Guadalupe Peak is the highest point in the state of Texas.</li>
+            <li>The Guadalupe Mountains were witness to the greatest mass extinction of all time.</li>
+            <li>There's gold in them thar hills…</li>
+            <li>Preserves one of the finest examples of an ancient, marine fossil reef on Earth</li>
+        </ul>
+
+        <h3>Discovery Park</h3>
+        <ul>
+            <li>It is the largest city park in Seattle, and occupies most of the former Fort Lawton site</li>
+            <li>The site is one of breathtaking majesty. Situated on Magnolia Bluff overlooking Puget Sound.</li>
+            <li>Discovery Park offers spectacular view of both the Cascade and the Olympic Mountain ranges</li>
+            <li>It’s located in Seattle.</li>
+        </ul>
+
+
+
+<dl>
+    <dt>How many people visit the national parks?</dt>
+    <dd>Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+
+    <dt>How old is the National Park System?</dt>
+    <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd>Permanent, temporary, and seasonal employees: More than 20,000</dd>
+
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+    <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on
+        July 20, 1951.
+    </dd>
+
+    <dt>How many areas are in the National Park System?</dt>
+    <dd>The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia,
+        American Samoa, Guam, Puerto Rico, and the Virgin Islands.
+    </dd>
+
+    <dt>What is the largest national park site?</dt>
+    <dd>Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+
+    <dt>What is the National Park Service budget?</dt>
+    <dd>Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
+
+    <dt>Can I bring my pet to a national park?</dt>
+    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging
+        facilities.
+    </dd>
+
+    <dt>How do I apply for a job with the National Park Service?</dt>
+    <dd>National Park Service jobs, including both permanent and seasonal positions, are listed on USA-JOBs.</dd>
+
+    <dt>What do I need to know about driving off-road in national parks?</dt>
+    <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road
+        driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.
+    </dd>
+</dl>
+
+</body>
+<button id="change-color">ChangeBgColor!</button>
+<button id="change-h3">ChangeFontWeight!</button>
+<button id="listItems">ChangeFontWeight!</button>
+
+<script>
+
+<!--    Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+    const nationalParkUl = document.querySelectorAll("ul");
+
+
+    function changeFactsColor() {
+        for (let i = 0; i < nationalParkUl.length; i++) {
+            nationalParkUl[i].lastElementChild.style.backgroundColor = "yellow";
+        }
+        console.log(nationalParkUl);
+    }
+
+    document.getElementById('change-color').addEventListener('click', changeFactsColor);
+
+// When any h3 is clicked, the lis underneath it should have a fontWeight of "bold". Hint: you should use this in the event listener to access the next sibling of the h3 that is clicked. You can get to the corresponding ul by traversing to the h3's sibling and then it's children.
+
+    const natlParksName= document.querySelectorAll("h3");
+    function changeFontWeight () {
+        for (let i = 0; i < natlParksName.length; i++) {
+            natlParksName[i].nextElementSibling.style.fontWeight = "bold";
+        }
+    }
+
+    document.getElementById('change-h3').addEventListener('click', changeFontWeight);
+
+// When any list item is clicked, the first li of that list item's parent ul should have a font color of blue. Hint: you should again rely on this in the li event handler.
+
+    const allLists = document.querySelectorAll("li")
+    function changeListItems() {
+        for (let i = 0; i < allLists.length; i++) {
+            allLists[i].style.color = "blue";
+        }
+    }
+
+    document.getElementById('listItems').addEventListener('click', changeListItems)
+
+
+
+</script>
+</html>
