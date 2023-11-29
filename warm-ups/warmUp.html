@@ -17,7 +17,75 @@
   <li>A-Achievable- </li>
   <li>R-Relevant- Goal is to travel the world, remote job will allow me to accomplish that</li>
   <li>T-Timely- In 2 years be free to work remotely from anywhere</li>
-
 </ul>
+
+<div class="container">
+    <header class="text-center my-4">
+        <h1>To-Do Goals</h1>
+    </header>
+    <main class="row">
+        <section class="border border-lg-none p-4 col-lg-4">
+            <form id="to-do-form">
+                <h3><label class="form-label" for="to-do">Enter goal:</label></h3>
+                <input class="form-control" type="text" name="to-do" id="to-do">
+                <div class="d-grid"><button class="btn btn-secondary mt-3 add" id="btn">Add To-Do</button></div>
+            </form>
+        </section>
+        <section class="my-4 my-lg-0 col-lg-8">
+            <h3>To-Dos:</h3>
+            <ul class="list-group" id="2">
+            </ul>
+        </section>
+    </main>
+</div>
+
+<div class="img"></div>
+
+
+<script>
+    fetch("https://pokeapi.co/api/v2/pokemon/squirtle")
+        .then(res => res.json())
+        .then(data => {
+            const image = document.createElement("img");
+            image.src = data.sprites.front_default;
+            document.querySelector(".img").appendChild(image);
+            console.log(data)
+        })
+        .catch(err => console.log(err))
+
+    // const image = document.createElement("img");
+    // image.src = data.sprites.front_default;
+    // document.querySelector(".img").appendChild(image)//;
+    // image.style.height = "200px";
+
+
+    function refresh() {
+        fetch('/data/inventory.json')
+            .then(response => response.json())
+            .then(data => {
+                // let table = document.createElement('table');
+                data.forEach(item => {
+                    let tr = document.createElement('tr');
+                    item.categories.forEach(category => {
+                        let td = document.createElement('td');
+                        td.textContent = category;
+                        tr.appendChild(td);
+                        // let thead = document.createElement('thead');
+                        let tbody = document.querySelector("#insertProducts");
+                        tbody.appendChild(tr);
+                        // tbody.appendChild();
+                        // document.body.appendChild(table);
+                        document.querySelector('#insertProducts').innerHTML = '';
+                        // document.querySelector('#insertProducts').append(table);
+                        tr.innerHTML = item.title + ' ' + item.quantity + ' ' + item.price + ' ' + item.categories;
+                        document.getElementById('insertProducts').appendChild(tr);
+                    })
+                })
+            })
+    }
+    refresh();
+
+
+</script>
 </body>
 </html>

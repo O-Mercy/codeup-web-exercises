@@ -58,7 +58,7 @@ const longestEmail = users.reduce((longest, user) => {
 }, '');
 console.log(longestEmail)
 
-const longestEmail =
+
 
 const instructorsList = users.reduce((name, user, index) => {
     if (index === user.length - 1) {
