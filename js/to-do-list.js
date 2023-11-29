@@ -37,5 +37,4 @@ form.addEventListener("submit", event => {
     form.firstElementChild.nextElementSibling.value = "";
 })
 document.getElementById("to-do-list").addEventListener("click", event =>{
-
 })

@@ -243,6 +243,7 @@ function newStyles(arrOfElements, bgColor, textColor) {
     return newElements;
 }
 
+// 29/11
 
 
 
