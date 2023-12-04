@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+  #map {
+  /* the width and height may be set to any size */
+  width: 100%;
+  height: 700px;
+  }
+  </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<!-- Custom JS -->
+<script>
+  mapboxgl.accessToken = MAPBOX_API;
+  const map = new mapboxgl.Map({
+    // setting the location for my map depending on the id in my html
+    container: 'map', // container ID
+    // this is setting my mapboxgl styling
+    style: 'mapbox://styles/mapbox/dark-v11', // style URL
+    // this zooms in my map
+    zoom: 10, // starting zoom
+    // this centers my map using the longitude and latitude
+    center: [-98.4916, 29.4252] // [lng, lat]
+  });
+
+  // setting a marker object
+  const marker = new mapboxgl.Marker()
+          // adding marker to specific [lng, lat]
+          .setLngLat([-98.4916, 29.4260])
+          // adding marker to map
+          .addTo(map);
+
+  // setting a popup object
+  let popup = new mapboxgl.Popup()
+          // adding popup to specific [lng, lat]
+          .setLngLat([-98.489615, 29.426827])
+          // setting the content of the popup
+          .setHTML("<p>Codeup Rocks!</p>")
+          // setting max width
+          .setMaxWidth("200px")
+          // adds popup to map
+          .addTo(map);
+
+  // setting the popup on the marker
+  const codeupPopup = new mapboxgl.Popup()
+          .setHTML("<p>Welcome to San Antonio!</p>");
+           marker.setPopup(codeupPopup);
+
+
+      //Geocoding
+  geocode("600 Navarro St #350, San Antonio, TX 78205", MAPBOX_API)
+  .then(result => {
+    console.log(result)
+    map.setCenter(result);
+    map.setZoom(10);
+  });
+
+  // Reverse geocode
+  reverseGeocode({lng: -98.4861, lat: 29.4260}, MAPBOX_API).
+  then( results => console.log(results) );
+
+
+</script>
+</body>
+</html>

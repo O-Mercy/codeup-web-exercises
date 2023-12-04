@@ -199,7 +199,7 @@ console.log(knowsJavascript(developers));
 
     let elements = [
     {
-        el: "button"
+        el: "button",
         style: {
             backgroundColor: "white",
             color: "black"
@@ -207,7 +207,7 @@ console.log(knowsJavascript(developers));
         content: "Submit"
     },
     {
-        el: "p"
+        el: "p",
         style: {
             backgroundColor: "white",
             color: "black"
@@ -215,7 +215,7 @@ console.log(knowsJavascript(developers));
         content: "Our company is better at doing company things than your company."
     },
     {
-        el: "h2"
+        el: "h2",
         style: {
             backgroundColor: "white",
             color: "black"
