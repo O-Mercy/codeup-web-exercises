@@ -17,101 +17,63 @@
 
 <div id="map"></div>
 
-
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
 
 
 <script>
-  const ACCESS_TOKEN = MAPBOX_API;
 
-  mapboxgl.accessToken = ACCESS_TOKEN;
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/navigation-night-v1',
-    zoom: 10,
-    center: [-122.3283441504258, 47.60551717648916]
-  });
   const restaurants = [
       {
-          name: Kizuki Ramen & Izakaya,
+          name: "Kizuki Ramen & Izakaya",
           longitude: -122.33968355141884,
           latitude: 47.61354986085212
       },
     {
-      name: Sushi Me,
+      name: "Sushi Me",
       longitude: -122.13302737463292,
       latitude: 47.623170722519745
   },
   {
-      name: Zaika,
+      name: "Zaika",
       longitude: -122.32886891668899,
       latitude: 47.61372766669555
   },
   {
-      name: Japonessa Sushi Cocina,
+      name: "Japonessa Sushi Cocina",
       longitude: -122.20092235901745,
       latitude: 47.61495895746644
   },
   {
-      name: STK SteakHouse,
+      name: "STK SteakHouse",
       longitude: -122.20114845450615,
       latitude: 47.61664226461492
   }
   ]
 
+  mapboxgl.accessToken = MAPBOX_API;
+  const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/navigation-night-v1',
+      zoom: 10,
+      center: [-122.3283441504258, 47.60551717648916]
+  });
 
-  // const marker = new mapboxgl.Marker()
-  //     .setLngLat([-122.33968355141884, 47.61354986085212])
-  //     .addTo(map);
-  //
-  // const marker2 = new mapboxgl.Marker()
-  //     .setLngLat([-122.13302737463292, 47.623170722519745])
-  //     .addTo(map);
-  //
-  // const marker3 = new mapboxgl.Marker()
-  //     .setLngLat([ -122.32886891668899, 47.61372766669555])
-  //     .addTo(map);
-  //
-  // const marker4 = new mapboxgl.Marker()
-  //     .setLngLat([-122.20092235901745, 47.61495895746644])
-  //     .addTo(map);
-  //
-  // const marker5 = new mapboxgl.Marker()
-  //     .setLngLat([-122.20114845450615, 47.61664226461492])
-  //     .addTo(map);
-
-
-
-  // const ramenPopup = new mapboxgl.Popup()
-  //     .setHTML("<p>Kizuki Ramen & Izakaya</p>");
-  // marker.setPopup(ramenPopup);
-  //
-  // const sushiPopup = new mapboxgl.Popup()
-  //     .setHTML("<p>Sushi Me</p>");
-  // marker.setPopup(sushiPopup);
-  //
-  // const indianPopup = new mapboxgl.Popup()
-  //     .setHTML("<p>Zaika</p>");
-  // marker.setPopup(indianPopup);
-  //
-  // const japSushiPopup = new mapboxgl.Popup()
-  //     .setHTML("<p>Japonessa Sushi Cocina</p>");
-  // marker.setPopup(japSushiPopup);
-  //
-  // const steakPopup = new mapboxgl.Popup()
-  //     .setHTML("<p>STK SteakHouse</p>");
-  // marker.setPopup(steakPopup);
-
-  restaurants.forEach(restaurant => {
+  restaurants.forEach((restaurant, index) => {
+      if(index === restaurants.length -1) {
+          map.setCenter([restaurant.longitude, restaurant.latitude]);
+          map.setZoom(10);
+      }
       const marker = new mapboxgl.Marker()
-          .setLngLat([restaurants.longitude, restaurants.latitude])
+          .setLngLat([restaurant.longitude, restaurants.latitude])
           .addTo(map);
       const Popup = new mapboxgl.Popup()
           .setHTML(`${restaurants.name} `);
       marker.setPopup(Popup);
-  }
+  })
 
 
 
