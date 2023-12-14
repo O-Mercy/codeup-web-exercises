@@ -96,155 +96,206 @@
 
 // 23/10
 // Create an array of at least 5 of your favorite movies. Create a for each (or a for of loop) to console log all of your movies in alphabetical order
-const movies= ["Mollys Game", "Ava", "The Good Nurse", "Memory", "The Harder they Fall"]
-movies.sort()
-movies.forEach(movie => console.log(movie))
-
-24/10
-// Create an array of car objects. each object should have three properties: make, model and color. write a for each or for loop to log each car's make, model and color
-const cars = [
-    {
-        Make: "Toyota",
-        model:"Avalon",
-        color: "Black"
-
-    },
-    {
-        Make: "Jeep",
-        model:"Wrangler",
-        color: "Granite Grey"
-
-    },
-    {
-        Make: "Rivian",
-        model:"SUV",
-        color: "White"
-
-    }]
-console.log(cars[0].Make)
-console.log(cars[0].model)
-console.log(cars[0].color)
-
-for (let i = 0; i < cars.length; i++) {
-    console.log(`Car ${i + 1}: Make - ${cars[i].Make}, Model - ${cars[i].model}, Color - ${cars[i].color}`);
-}
-
-cars.forEach(car => {
-    console.log(`Make: ${car.Make}, Model: ${car.model}, Color: ${car.color}`);
-});
-
-// 01/11
-// Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
-
-    // Data Structure/Example Input:
-    let developers = [
-        {
-            name: "Jonathan",
-            languages: {
-                frontend: ["HTML", "JavaScript", "CSS"],
-                backend: ["Java"]
-            }
-        },
-        {
-            name: "Bonnie",
-            languages: {
-                frontend: ["JavaScript"],
-                backend: []
-            }
-        },
-        {
-            name: "Raj",
-            languages: {
-                frontend: [],
-                backend: ["C#", "Java", "Python"]
-            }
-        },
-        {
-            name: "Carmen",
-            languages: {
-                frontend: ["JavaScript", "HTML", "CSS", "React"],
-                backend: ["C#", "Java", "Python", "TypeScript"]
-            }
+// const movies= ["Mollys Game", "Ava", "The Good Nurse", "Memory", "The Harder they Fall"]
+// movies.sort()
+// movies.forEach(movie => console.log(movie))
+//
+// 24/10
+// // Create an array of car objects. each object should have three properties: make, model and color. write a for each or for loop to log each car's make, model and color
+// const cars = [
+//     {
+//         Make: "Toyota",
+//         model:"Avalon",
+//         color: "Black"
+//
+//     },
+//     {
+//         Make: "Jeep",
+//         model:"Wrangler",
+//         color: "Granite Grey"
+//
+//     },
+//     {
+//         Make: "Rivian",
+//         model:"SUV",
+//         color: "White"
+//
+//     }]
+// console.log(cars[0].Make)
+// console.log(cars[0].model)
+// console.log(cars[0].color)
+//
+// for (let i = 0; i < cars.length; i++) {
+//     console.log(`Car ${i + 1}: Make - ${cars[i].Make}, Model - ${cars[i].model}, Color - ${cars[i].color}`);
+// }
+//
+// cars.forEach(car => {
+//     console.log(`Make: ${car.Make}, Model: ${car.model}, Color: ${car.color}`);
+// });
+//
+// // 01/11
+// // Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+//
+//     // Data Structure/Example Input:
+//     let developers = [
+//         {
+//             name: "Jonathan",
+//             languages: {
+//                 frontend: ["HTML", "JavaScript", "CSS"],
+//                 backend: ["Java"]
+//             }
+//         },
+//         {
+//             name: "Bonnie",
+//             languages: {
+//                 frontend: ["JavaScript"],
+//                 backend: []
+//             }
+//         },
+//         {
+//             name: "Raj",
+//             languages: {
+//                 frontend: [],
+//                 backend: ["C#", "Java", "Python"]
+//             }
+//         },
+//         {
+//             name: "Carmen",
+//             languages: {
+//                 frontend: ["JavaScript", "HTML", "CSS", "React"],
+//                 backend: ["C#", "Java", "Python", "TypeScript"]
+//             }
+//         }
+//     ]
+//
+//
+// function knowsJavaScript(developers) {
+//     let javascriptDevelopers = [];
+//     for (let i = 0; i < developers.length; i++) {
+//         if (developers[i].languages.frontend.includes("JavaScript")) {
+//             javascriptDevelopers.push(developers[i].name);
+//         }
+//     }
+//     return javascriptDevelopers;
+// }
+//
+// console.log(knowsJavaScript(developers));
+//
+//
+//
+// const knowsJavascript = () => {
+//     let javaScriptDevs = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[j].languages.frontend.length; j++) {
+//             javaScriptDevs.push(arr[i].name)
+//         }
+//     }
+//     return javaScriptDevs
+// }
+// console.log(knowsJavascript(developers));
+//
+// // 11/10
+// // Create a function that accepts three arguments (arrOfElements, bgColor, textColor), and returns the array of objects with their corresponding properties changed to the inputted values of bgColor and textColor.
+//
+//     let elements = [
+//     {
+//         el: "button",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Submit"
+//     },
+//     {
+//         el: "p",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Our company is better at doing company things than your company."
+//     },
+//     {
+//         el: "h2",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Welcome Back!"
+//     }
+// ];
+// function updateStyles(arrOfElements, bgColor, textColor) {
+//     let updatedElements = [];
+//     for (let i = 0; i < arrOfElements.length; i++) {
+//         let element = arrOfElements[i];
+//         element.style.backgroundColor = bgColor;
+//         element.style.color = textColor;
+//         updatedElements.push(element);
+//     }
+//     return updatedElements;
+// }
+// function newStyles(arrOfElements, bgColor, textColor) {
+//     let newElements = [];
+//     for (let i = 0; i < arrOfElements.length; i++){
+//         let element = arrOfElements[i];
+//         bgColor = element.style.backgroundColor
+//         textColor = element.style.color
+//     }
+//     return newElements;
+// }
+// // HACKERRANK CHALLENGE QUESTIONS
+// // Solve me first
+// function solveMeFirst(a, b) {
+//     // Hint: Type return a+b below
+//     return a + b
+// }
+//
+// // Simple array sum
+// function simpleArraySum(ar) {
+//     // Write your code here
+//     let sum = 0;
+//     for (let i = 0; i < ar.length; i++) {
+//         sum += ar[i];
+//     }
+//     return sum;
+// }
+//
+// // A very big sum
+// function aVeryBigSum(ar) {
+//     // Write your code here
+//     let sum = 0;
+//     for (let i = 0; i < ar.length; i++) {
+//         sum += ar[i];
+//     }
+//     return sum;
+// }
+//
+// // 12/07
+function compareTriplets(a, b) {
+    let aliceTotal = 0;
+    let bobTotal = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b[i]) {
+            aliceTotal++;
+        } else if (a[i] < b[i]) {
+            bobTotal++;
         }
-    ]
-
-
-function knowsJavaScript(developers) {
-    let javascriptDevelopers = [];
-    for (let i = 0; i < developers.length; i++) {
-        if (developers[i].languages.frontend.includes("JavaScript")) {
-            javascriptDevelopers.push(developers[i].name);
-        }
     }
-    return javascriptDevelopers;
+    return [aliceTotal, bobTotal];
 }
 
-console.log(knowsJavaScript(developers));
-
-
-
-const knowsJavascript = () => {
-    let javaScriptDevs = [];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[j].languages.frontend.length; j++) {
-            javaScriptDevs.push(arr[i].name)
-        }
-    }
-    return javaScriptDevs
-}
-console.log(knowsJavascript(developers));
-
-// 11/10
-// Create a function that accepts three arguments (arrOfElements, bgColor, textColor), and returns the array of objects with their corresponding properties changed to the inputted values of bgColor and textColor.
-
-    let elements = [
-    {
-        el: "button",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Submit"
-    },
-    {
-        el: "p",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Our company is better at doing company things than your company."
-    },
-    {
-        el: "h2",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Welcome Back!"
-    }
-];
-function updateStyles(arrOfElements, bgColor, textColor) {
-    let updatedElements = [];
-    for (let i = 0; i < arrOfElements.length; i++) {
-        let element = arrOfElements[i];
-        element.style.backgroundColor = bgColor;
-        element.style.color = textColor;
-        updatedElements.push(element);
-    }
-    return updatedElements;
-}
-function newStyles(arrOfElements, bgColor, textColor) {
-    let newElements = [];
-    for (let i = 0; i < arrOfElements.length; i++){
-        let element = arrOfElements[i];
-        bgColor = element.style.backgroundColor
-        textColor = element.style.color
-    }
-    return newElements;
-}
-
-// 29/11
-
+// Plus minus
+// function plusMinus(arr) {
+//     let positives = 0;
+//     let negatives = 0;
+//     for (const value of arr) {
+//         if (value > 0) {
+//             positives++;
+//         } else if (value < 0) {
+//             negatives++;
+//         }
+//     }
+//     return [ positives, negatives ] ;
+// }
 
 
 
